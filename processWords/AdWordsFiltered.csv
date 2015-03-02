@@ -1,0 +1,356 @@
+City,Criteria,ID,State,DMA
+Anchorage,1012873,Alaska,"Anchorage, AK",743
+Anderson,1012874,Alaska,"Fairbanks, AK",745
+Angoon,1012875,Alaska,"Juneau, AK",747
+Atqasuk,1012876,Alaska,"Fairbanks, AK",745
+Barrow,1012877,Alaska,"Fairbanks, AK",745
+Bethel,1012878,Alaska,"Anchorage, AK",743
+Clear,1012879,Alaska,"Fairbanks, AK",745
+Cordova,1012880,Alaska,"Anchorage, AK",743
+Craig,1012881,Alaska,"Juneau, AK",747
+Dillingham,1012883,Alaska,"Anchorage, AK",743
+Fairbanks,1012887,Alaska,"Fairbanks, AK",745
+Galena,1012888,Alaska,"Fairbanks, AK",745
+Glennallen,1012890,Alaska,"Anchorage, AK",743
+Gustavus,1012891,Alaska,"Juneau, AK",747
+Haines,1012892,Alaska,"Juneau, AK",747
+Healy,1012893,Alaska,"Fairbanks, AK",745
+Homer,1012894,Alaska,"Anchorage, AK",743
+Hoonah,1012895,Alaska,"Juneau, AK",747
+Juneau,1012896,Alaska,"Juneau, AK",747
+Kenai,1012897,Alaska,"Anchorage, AK",743
+Ketchikan,1012898,Alaska,"Juneau, AK",747
+Klawock,1012899,Alaska,"Juneau, AK",747
+Kodiak,1012900,Alaska,"Anchorage, AK",743
+Kotzebue,1012901,Alaska,"Fairbanks, AK",745
+McGrath,1012902,Alaska,"Fairbanks, AK",745
+Metlakatla,1012903,Alaska,"Juneau, AK",747
+Nikiski,1012905,Alaska,"Anchorage, AK",743
+Nome,1012906,Alaska,"Fairbanks, AK",745
+Palmer,1012908,Alaska,"Anchorage, AK",743
+Pelican,1012909,Alaska,"Juneau, AK",747
+Petersburg,1012910,Alaska,"Juneau, AK",747
+Seward,1012912,Alaska,"Anchorage, AK",743
+Sitka,1012913,Alaska,"Juneau, AK",747
+Skagway,1012914,Alaska,"Juneau, AK",747
+Soldotna,1012915,Alaska,"Anchorage, AK",743
+Tanacross,1012917,Alaska,"Fairbanks, AK",745
+Tok,1012919,Alaska,"Fairbanks, AK",745
+Tununak,1012920,Alaska,"Anchorage, AK",743
+Unalaska,1012921,Alaska,"Anchorage, AK",743
+Valdez,1012922,Alaska,"Anchorage, AK",743
+Wasilla,1012923,Alaska,"Anchorage, AK",743
+Whittier,1012924,Alaska,"Anchorage, AK",743
+Wrangell,1012925,Alaska,"Juneau, AK",747
+Yakutat,1012926,Alaska,"Juneau, AK",747
+College,9051751,Alaska,"Fairbanks, AK",745
+Knik-Fairview,9052248,Alaska,"Anchorage, AK",743
+Kongiganak,9052249,Alaska,"Anchorage, AK",743
+Abbeville,1012927,Alabama,"Dothan, AL",606
+Adamsville,1012928,Alabama,"Birmingham, AL",630
+Addison,1012929,Alabama,"Birmingham, AL",630
+Adger,1012930,Alabama,"Birmingham, AL",630
+Alabaster,1012931,Alabama,"Birmingham, AL",630
+Albertville,1012932,Alabama,"Huntsville-Decatur (Florence), AL",691
+Alexandria,1012934,Alabama,"Birmingham, AL",630
+Allgood,1012935,Alabama,"Birmingham, AL",630
+Alpine,1012936,Alabama,"Birmingham, AL",630
+Andalusia,1012937,Alabama,"Montgomery (Selma), AL",698
+Anniston,1012938,Alabama,"Birmingham, AL",630
+Arab,1012939,Alabama,"Huntsville-Decatur (Florence), AL",691
+Arlington,1012940,Alabama,"Montgomery (Selma), AL",698
+Ashford,1012941,Alabama,"Dothan, AL",606
+Ashland,1012942,Alabama,"Birmingham, AL",630
+Ashville,1012943,Alabama,"Birmingham, AL",630
+Athens,1012944,Alabama,"Huntsville-Decatur (Florence), AL",691
+Atmore,1012945,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Attalla,1012946,Alabama,"Birmingham, AL",630
+Auburn,1012947,Alabama,"Columbus, GA",522
+Autaugaville,1012949,Alabama,"Montgomery (Selma), AL",698
+Axis,1012950,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Berry,1012952,Alabama,"Birmingham, AL",630
+Bessemer,1012953,Alabama,"Birmingham, AL",630
+Birmingham,1012954,Alabama,"Birmingham, AL",630
+Blountsville,1012955,Alabama,"Birmingham, AL",630
+Boaz,1012956,Alabama,"Huntsville-Decatur (Florence), AL",691
+Bremen,1012957,Alabama,"Birmingham, AL",630
+Brewton,1012958,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Brookwood,1012959,Alabama,"Birmingham, AL",630
+Brownsboro,1012960,Alabama,"Huntsville-Decatur (Florence), AL",691
+Bucks,1012961,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Buhl,1012962,Alabama,"Birmingham, AL",630
+Butler,1012963,Alabama,"Meridian, MS",711
+Calera,1012964,Alabama,"Birmingham, AL",630
+Camden,1012966,Alabama,"Montgomery (Selma), AL",698
+Carrollton,1012967,Alabama,"Birmingham, AL",630
+Centre,1012968,Alabama,"Birmingham, AL",630
+Centreville,1012969,Alabama,"Birmingham, AL",630
+Chapman,1012970,Alabama,"Montgomery (Selma), AL",698
+Chelsea,1012971,Alabama,"Birmingham, AL",630
+Cherokee,1012972,Alabama,"Huntsville-Decatur (Florence), AL",691
+Childersburg,1012973,Alabama,"Birmingham, AL",630
+Clanton,1012974,Alabama,"Birmingham, AL",630
+Clayton,1012975,Alabama,"Columbus, GA",522
+Clio,1012976,Alabama,"Columbus, GA",522
+Coffeeville,1012977,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Columbia,1012978,Alabama,"Dothan, AL",606
+Columbiana,1012979,Alabama,"Birmingham, AL",630
+Cottondale,1012980,Alabama,"Birmingham, AL",630
+Cottonwood,1012981,Alabama,"Dothan, AL",606
+Cowarts,1012982,Alabama,"Dothan, AL",606
+Creola,1012983,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Crossville,1012984,Alabama,"Huntsville-Decatur (Florence), AL",691
+Cullman,1012985,Alabama,"Birmingham, AL",630
+Daleville,1012986,Alabama,"Dothan, AL",606
+Daphne,1012987,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Deatsville,1012989,Alabama,"Montgomery (Selma), AL",698
+Decatur,1012990,Alabama,"Huntsville-Decatur (Florence), AL",691
+Demopolis,1012991,Alabama,"Montgomery (Selma), AL",698
+Dothan,1012993,Alabama,"Dothan, AL",606
+Eastaboga,1012994,Alabama,"Birmingham, AL",630
+Eclectic,1012995,Alabama,"Montgomery (Selma), AL",698
+Elba,1012997,Alabama,"Dothan, AL",606
+Elberta,1012998,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Enterprise,1012999,Alabama,"Dothan, AL",606
+Eufaula,1013000,Alabama,"Columbus, GA",522
+Eutaw,1013001,Alabama,"Birmingham, AL",630
+Evergreen,1013002,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Excel,1013003,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Fairfield,1013004,Alabama,"Birmingham, AL",630
+Fairhope,1013005,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Fayette,1013006,Alabama,"Birmingham, AL",630
+Florence,1013007,Alabama,"Huntsville-Decatur (Florence), AL",691
+Foley,1013008,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Fruitdale,1013009,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Fulton,1013013,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Fultondale,1013014,Alabama,"Birmingham, AL",630
+Gadsden,1013015,Alabama,"Birmingham, AL",630
+Gardendale,1013016,Alabama,"Birmingham, AL",630
+Geneva,1013017,Alabama,"Dothan, AL",606
+Glenwood,1013018,Alabama,"Montgomery (Selma), AL",698
+Goodwater,1013019,Alabama,"Birmingham, AL",630
+Gordo,1013020,Alabama,"Birmingham, AL",630
+Graysville,1013022,Alabama,"Birmingham, AL",630
+Greensboro,1013023,Alabama,"Birmingham, AL",630
+Greenville,1013024,Alabama,"Montgomery (Selma), AL",698
+Guin,1013026,Alabama,"Birmingham, AL",630
+Guntersville,1013028,Alabama,"Huntsville-Decatur (Florence), AL",691
+Haleyville,1013029,Alabama,"Birmingham, AL",630
+Hamilton,1013030,Alabama,"Birmingham, AL",630
+Hanceville,1013031,Alabama,"Birmingham, AL",630
+Hartselle,1013032,Alabama,"Huntsville-Decatur (Florence), AL",691
+Hatchechubbee,1013033,Alabama,"Columbus, GA",522
+Hayden,1013034,Alabama,"Birmingham, AL",630
+Hayneville,1013035,Alabama,"Montgomery (Selma), AL",698
+Headland,1013037,Alabama,"Dothan, AL",606
+Heflin,1013038,Alabama,"Atlanta, GA",524
+Helena,1013039,Alabama,"Birmingham, AL",630
+Hodges,1013040,Alabama,"Huntsville-Decatur (Florence), AL",691
+Huntsville,1013042,Alabama,"Huntsville-Decatur (Florence), AL",691
+Huxford,1013043,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Ider,1013044,Alabama,"Huntsville-Decatur (Florence), AL",691
+Jack,1013045,Alabama,"Dothan, AL",606
+Jackson,1013046,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Jacksonville,1013047,Alabama,"Birmingham, AL",630
+Jasper,1013048,Alabama,"Birmingham, AL",630
+Jefferson,1013049,Alabama,"Montgomery (Selma), AL",698
+Kellyton,1013050,Alabama,"Birmingham, AL",630
+Killen,1013051,Alabama,"Huntsville-Decatur (Florence), AL",691
+Lanett,1013054,Alabama,"Columbus, GA",522
+Leeds,1013055,Alabama,"Birmingham, AL",630
+Leesburg,1013056,Alabama,"Birmingham, AL",630
+Lillian,1013057,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Lincoln,1013058,Alabama,"Birmingham, AL",630
+Linden,1013059,Alabama,"Montgomery (Selma), AL",698
+Lineville,1013060,Alabama,"Birmingham, AL",630
+Livingston,1013061,Alabama,"Meridian, MS",711
+Loachapoka,1013062,Alabama,"Columbus, GA",522
+Loxley,1013064,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Luverne,1013065,Alabama,"Montgomery (Selma), AL",698
+Madison,1013066,Alabama,"Huntsville-Decatur (Florence), AL",691
+Marion,1013067,Alabama,"Montgomery (Selma), AL",698
+Mathews,1013068,Alabama,"Montgomery (Selma), AL",698
+Millport,1013069,Alabama,"Columbus-Tupelo-West Point, MS",673
+Millry,1013070,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Mobile,1013071,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Monroeville,1013072,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Montevallo,1013073,Alabama,"Birmingham, AL",630
+Montgomery,1013074,Alabama,"Montgomery (Selma), AL",698
+Montrose,1013075,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Morris,1013076,Alabama,"Birmingham, AL",630
+Moulton,1013077,Alabama,"Huntsville-Decatur (Florence), AL",691
+Munford,1013078,Alabama,"Birmingham, AL",630
+Newton,1013082,Alabama,"Dothan, AL",606
+Newville,1013083,Alabama,"Dothan, AL",606
+Normal,1013084,Alabama,"Huntsville-Decatur (Florence), AL",691
+Northport,1013085,Alabama,"Birmingham, AL",630
+Notasulga,1013086,Alabama,"Montgomery (Selma), AL",698
+Oakman,1013087,Alabama,"Birmingham, AL",630
+Oneonta,1013088,Alabama,"Birmingham, AL",630
+Opelika,1013089,Alabama,"Columbus, GA",522
+Opp,1013090,Alabama,"Montgomery (Selma), AL",698
+Oxford,1013092,Alabama,"Birmingham, AL",630
+Ozark,1013093,Alabama,"Dothan, AL",606
+Pelham,1013095,Alabama,"Birmingham, AL",630
+Pennington,1013097,Alabama,"Meridian, MS",711
+Piedmont,1013100,Alabama,"Birmingham, AL",630
+Pinson,1013103,Alabama,"Birmingham, AL",630
+Prattville,1013105,Alabama,"Montgomery (Selma), AL",698
+Quinton,1013106,Alabama,"Birmingham, AL",630
+Ragland,1013107,Alabama,"Birmingham, AL",630
+Rainsville,1013109,Alabama,"Huntsville-Decatur (Florence), AL",691
+Ramer,1013110,Alabama,"Montgomery (Selma), AL",698
+Reform,1013112,Alabama,"Birmingham, AL",630
+Roanoke,1013113,Alabama,"Atlanta, GA",524
+Robertsdale,1013114,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Russellville,1013115,Alabama,"Huntsville-Decatur (Florence), AL",691
+Rutledge,1013116,Alabama,"Montgomery (Selma), AL",698
+Saginaw,1013117,Alabama,"Birmingham, AL",630
+Saraland,1013118,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Scottsboro,1013119,Alabama,"Huntsville-Decatur (Florence), AL",691
+Selma,1013120,Alabama,"Montgomery (Selma), AL",698
+Semmes,1013121,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Shannon,1013122,Alabama,"Birmingham, AL",630
+Sheffield,1013123,Alabama,"Huntsville-Decatur (Florence), AL",691
+Shelby,1013124,Alabama,"Birmingham, AL",630
+Springville,1013126,Alabama,"Birmingham, AL",630
+Sulligent,1013127,Alabama,"Columbus-Tupelo-West Point, MS",673
+Sumiton,1013128,Alabama,"Birmingham, AL",630
+Summerdale,1013129,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Sycamore,1013130,Alabama,"Birmingham, AL",630
+Sylacauga,1013131,Alabama,"Birmingham, AL",630
+Talladega,1013132,Alabama,"Birmingham, AL",630
+Tallassee,1013133,Alabama,"Montgomery (Selma), AL",698
+Theodore,1013134,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Thomasville,1013135,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Toney,1013136,Alabama,"Huntsville-Decatur (Florence), AL",691
+Troy,1013137,Alabama,"Montgomery (Selma), AL",698
+Trussville,1013138,Alabama,"Birmingham, AL",630
+Tuscaloosa,1013139,Alabama,"Birmingham, AL",630
+Tuscumbia,1013140,Alabama,"Huntsville-Decatur (Florence), AL",691
+Tuskegee,1013141,Alabama,"Montgomery (Selma), AL",698
+Valley,1013144,Alabama,"Columbus, GA",522
+Vernon,1013145,Alabama,"Columbus-Tupelo-West Point, MS",673
+Vinemont,1013146,Alabama,"Birmingham, AL",630
+Wadley,1013147,Alabama,"Atlanta, GA",524
+Warrior,1013149,Alabama,"Birmingham, AL",630
+Webb,1013150,Alabama,"Dothan, AL",606
+Wedowee,1013151,Alabama,"Atlanta, GA",524
+Wetumpka,1013152,Alabama,"Montgomery (Selma), AL",698
+Winfield,1013153,Alabama,"Birmingham, AL",630
+York,1013154,Alabama,"Meridian, MS",711
+Ardmore,9051520,Alabama,"Huntsville-Decatur (Florence), AL",691
+Chatom,9051719,Alabama,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",686
+Dadeville,9051804,Alabama,"Montgomery (Selma), AL",698
+Florala,9051952,Alabama,"Montgomery (Selma), AL",698
+Forestdale,9051965,Alabama,"Birmingham, AL",630
+Grant,9052049,Alabama,"Huntsville-Decatur (Florence), AL",691
+Harvest,9052111,Alabama,"Huntsville-Decatur (Florence), AL",691
+Henagar,9052119,Alabama,"Huntsville-Decatur (Florence), AL",691
+Homewood,9052152,Alabama,"Birmingham, AL",630
+Hoover,9052156,Alabama,"Birmingham, AL",630
+Hueytown,9052172,Alabama,"Birmingham, AL",630
+Irondale,9052189,Alabama,"Birmingham, AL",630
+Millbrook,9052440,Alabama,"Montgomery (Selma), AL",698
+Moody,9052472,Alabama,"Birmingham, AL",630
+Tarrant,9052960,Alabama,"Birmingham, AL",630
+Adona,1013156,Arkansas,"Little Rock-Pine Bluff, AR",693
+Alexander,1013157,Arkansas,"Little Rock-Pine Bluff, AR",693
+Alma,1013158,Arkansas,"Ft. Smith-Fayetteville-Springdale-Rogers, AR",670
+Altheimer,1013159,Arkansas,"Little Rock-Pine Bluff, AR",693
+Amity,1013160,Arkansas,"Little Rock-Pine Bluff, AR",693
+Arkadelphia,1013161,Arkansas,"Little Rock-Pine Bluff, AR",693
+Armorel,1013162,Arkansas,"Memphis, TN",640
+Ashdown,1013164,Arkansas,"Shreveport, LA",612
+Augusta,1013165,Arkansas,"Little Rock-Pine Bluff, AR",693
+Barling,1013167,Arkansas,"Ft. Smith-Fayetteville-Springdale-Rogers, AR",670
+Batesville,1013168,Arkansas,"Little Rock-Pine Bluff, AR",693
+Bauxite,1013169,Arkansas,"Little Rock-Pine Bluff, AR",693
+Bay,1013170,Arkansas,"Jonesboro, AR",734
+Beebe,1013171,Arkansas,"Little Rock-Pine Bluff, AR",693
+Benton,1013173,Arkansas,"Little Rock-Pine Bluff, AR",693
+Bentonville,1013174,Arkansas,"Ft. Smith-Fayetteville-Springdale-Rogers, AR",670
+Berryville,1013175,Arkansas,"Springfield, MO",619
+Bigelow,1013176,Arkansas,"Little Rock-Pine Bluff, AR",693
+Blytheville,1013177,Arkansas,"Memphis, TN",640
+Booneville,1013178,Arkansas,"Ft. Smith-Fayetteville-Springdale-Rogers, AR",670
+Bradford,1013179,Arkansas,"Little Rock-Pine Bluff, AR",693
+Branch,1013180,Arkansas,"Ft. Smith-Fayetteville-Springdale-Rogers, AR",670
+Brinkley,1013181,Arkansas,"Little Rock-Pine Bluff, AR",693
+Brockwell,1013182,Arkansas,"Little Rock-Pine Bluff, AR",693
+Brookland,1013183,Arkansas,"Jonesboro, AR",734
+Bryant,1013184,Arkansas,"Little Rock-Pine Bluff, AR",693
+Burdette,1013185,Arkansas,"Memphis, TN",640
+Cabot,1013186,Arkansas,"Little Rock-Pine Bluff, AR",693
+Camden,1013188,Arkansas,"Little Rock-Pine Bluff, AR",693
+Carlisle,1013189,Arkansas,"Little Rock-Pine Bluff, AR",693
+Carthage,1013190,Arkansas,"Little Rock-Pine Bluff, AR",693
+Charleston,1013193,Arkansas,"Ft. Smith-Fayetteville-Springdale-Rogers, AR",670
+Charlotte,1013194,Arkansas,"Little Rock-Pine Bluff, AR",693
+Clarendon,1013196,Arkansas,"Little Rock-Pine Bluff, AR",693
+Clarksville,1013197,Arkansas,"Ft. Smith-Fayetteville-Springdale-Rogers, AR",670
+Clinton,1013198,Arkansas,"Little Rock-Pine Bluff, AR",693
+Compton,1013199,Arkansas,"Springfield, MO",619
+Conway,1013200,Arkansas,"Little Rock-Pine Bluff, AR",693
+Corning,1013201,Arkansas,"Jonesboro, AR",734
+Crossett,1013202,Arkansas,"Monroe, LA-El Dorado, AR",628
+Danville,1013203,Arkansas,"Little Rock-Pine Bluff, AR",693
+Dardanelle,1013204,Arkansas,"Little Rock-Pine Bluff, AR",693
+DeWitt,1013206,Arkansas,"Little Rock-Pine Bluff, AR",693
+Decatur,1013207,Arkansas,"Ft. Smith-Fayetteville-Springdale-Rogers, AR",670
+Dermott,1013208,Arkansas,"Little Rock-Pine Bluff, AR",693
+Dumas,1013210,Arkansas,"Little Rock-Pine Bluff, AR",693
+Dyess,1013211,Arkansas,"Memphis, TN",640
+England,1013214,Arkansas,"Little Rock-Pine Bluff, AR",693
+Enola,1013215,Arkansas,"Little Rock-Pine Bluff, AR",693
+Farmington,1013218,Arkansas,"Ft. Smith-Fayetteville-Springdale-Rogers, AR",670
+Fayetteville,1013219,Arkansas,"Ft. Smith-Fayetteville-Springdale-Rogers, AR",670
+Flippin,1013220,Arkansas,"Springfield, MO",619
+Floral,1013221,Arkansas,"Little Rock-Pine Bluff, AR",693
+Fordyce,1013222,Arkansas,"Little Rock-Pine Bluff, AR",693
+Friendship,1013225,Arkansas,"Little Rock-Pine Bluff, AR",693
+Gassville,1013227,Arkansas,"Springfield, MO",619
+Gentry,1013228,Arkansas,"Ft. Smith-Fayetteville-Springdale-Rogers, AR",670
+Gillham,1013229,Arkansas,"Shreveport, LA",612
+Glenwood,1013230,Arkansas,"Little Rock-Pine Bluff, AR",693
+Gould,1013231,Arkansas,"Little Rock-Pine Bluff, AR",693
+Grady,1013232,Arkansas,"Little Rock-Pine Bluff, AR",693
+Gravette,1013233,Arkansas,"Ft. Smith-Fayetteville-Springdale-Rogers, AR",670
+Greenbrier,1013234,Arkansas,"Little Rock-Pine Bluff, AR",693
+Greenwood,1013235,Arkansas,"Ft. Smith-Fayetteville-Springdale-Rogers, AR",670
+Guion,1013236,Arkansas,"Little Rock-Pine Bluff, AR",693
+Hackett,1013237,Arkansas,"Ft. Smith-Fayetteville-Springdale-Rogers, AR",670
+Hamburg,1013238,Arkansas,"Monroe, LA-El Dorado, AR",628
+Hardy,1013239,Arkansas,"Jonesboro, AR",734
+Harrisburg,1013240,Arkansas,"Memphis, TN",640
+Harrison,1013241,Arkansas,"Springfield, MO",619
+Hartford,1013242,Arkansas,"Ft. Smith-Fayetteville-Springdale-Rogers, AR",670
+Hattieville,1013243,Arkansas,"Little Rock-Pine Bluff, AR",693
+Hazen,1013244,Arkansas,"Little Rock-Pine Bluff, AR",693
+Hector,1013246,Arkansas,"Little Rock-Pine Bluff, AR",693
+Helena,1013247,Arkansas,"Memphis, TN",640
+Higden,1013248,Arkansas,"Little Rock-Pine Bluff, AR",693
+Hope,1013249,Arkansas,"Shreveport, LA",612
+Hoxie,1013252,Arkansas,"Jonesboro, AR",734
+Humphrey,1013253,Arkansas,"Little Rock-Pine Bluff, AR",693
+Huntsville,1013254,Arkansas,"Ft. Smith-Fayetteville-Springdale-Rogers, AR",670
+Imboden,1013255,Arkansas,"Jonesboro, AR",734
+Jacksonville,1013256,Arkansas,"Little Rock-Pine Bluff, AR",693
+Jasper,1013257,Arkansas,"Springfield, MO",619
+Jessieville,1013258,Arkansas,"Little Rock-Pine Bluff, AR",693
+Joiner,1013259,Arkansas,"Memphis, TN",640
+Jonesboro,1013260,Arkansas,"Jonesboro, AR",734
+Keiser,1013261,Arkansas,"Memphis, TN",640
+Kensett,1013262,Arkansas,"Little Rock-Pine Bluff, AR",693
+Lavaca,1013264,Arkansas,"Ft. Smith-Fayetteville-Springdale-Rogers, AR",670
+Lepanto,1013266,Arkansas,"Memphis, TN",640
+Leslie,1013267,Arkansas,"Little Rock-Pine Bluff, AR",693
+Lockesburg,1013270,Arkansas,"Shreveport, LA",612
+London,1013271,Arkansas,"Little Rock-Pine Bluff, AR",693
+Lonoke,1013272,Arkansas,"Little Rock-Pine Bluff, AR",693
+Lowell,1013273,Arkansas,"Ft. Smith-Fayetteville-Springdale-Rogers, AR",670
+Luxora,1013274,Arkansas,"Memphis, TN",640
+Lynn,1013275,Arkansas,"Jonesboro, AR",734
+Mabelvale,1013276,Arkansas,"Little Rock-Pine Bluff, AR",693
+Magnolia,1013277,Arkansas,"Shreveport, LA",612
+Malvern,1013278,Arkansas,"Little Rock-Pine Bluff, AR",693

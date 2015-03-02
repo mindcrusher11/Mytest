@@ -1,0 +1,42 @@
+import mongo_crud as mg
+
+db = mg.connect_to_server('localhost',27017,'dma')
+
+def join_table():
+	active_players = db.active_athletes.find()
+	for athletes in active_players:
+		print(athletes)
+		tweet_info = db.athlete_info.find({'name':athletes['Player']})
+		for tweets in tweet_info:
+			print(tweets)	
+			db.active_athletes.update({'Player':tweets['name']},{'$set':{'Twitter_followers':tweets['followers'],'Twitter_username':tweets['screen_name'],'group':tweets['group']}})			
+#counting = db.
+
+def join_twitter_athlete():
+	athlete = db.athlete_info.find()
+	for player in athlete:
+		#print('player is ',player)
+		twitter_data = db.twitter_url.find({'link':player['twitter_url_link']})
+		for tweet_info in twitter_data:
+			#print('tweet_info is ',tweet_info)
+			#counting = db.athlete_info.find({'twitter_url_link':tweet_info['link']}).count()
+			#print(counting)
+			db.athlete_info.update({'twitter_url_link':tweet_info['link']},{'$set':{'screen_name':tweet_info['screen_name']}})
+
+def join_active_weeki():
+	active_players = db.active_athletes.find()
+	for athletes in active_players:
+		weeki_players = db.weeki_athletes.find({'rdf-schema#label':athletes['Player']})
+		#counting = db.weeki_athletes.find({'rdf-schema#label':athletes['Player']}).count()
+		#print(counting)
+		
+		for players in weeki_players:
+			print players['rdf-schema#label']
+			is_done = db.active_athletes.update({'Player':players['rdf-schema#label']},{'$set':{'weight':players['weight'],'weeki_comment':players['rdf-schema#comment'],'dob':players['birthDate'],'birthPlace':players['birthPlace_label'],'birthPlace_url':players['birthPlace'],'college':players['college_label'],'high_school':players['highschool_label'],'height':players['height'],'nationality':players['nationality_label']}})
+			print(is_done)
+			#print('player is ',players)
+
+
+join_active_weeki()
+#join_twitter_athlete()
+#join_table()

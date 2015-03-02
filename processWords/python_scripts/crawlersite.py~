@@ -1,0 +1,140 @@
+from bs4 import BeautifulSoup
+import urllib2,string,re,time
+import mongo_crud as mg
+import pymongo as pym
+
+athlete_list = []
+
+db = mg.connect_to_server('localhost',27017,'dma')
+twitterIdCollection = db.twitter_url
+athlete_person_info = db.athlete_info_person
+athlete_per = db.athlete_info
+leftVal = []
+counter = 0;
+def check_values():
+	athlete1 = athlete_person_info.find()
+	athlete2 = athlete_per.find()
+	print(athlete1.count())
+	print(athlete2.count())
+	for athlete_value in athlete2:
+		#db.testathlete.insert({'_id':athlete_value['twitter_url_link'],'name':athlete_value['name'],'group':athlete_value['group'],'followers':athlete_value['followers'],'img_src':athlete_value['img_src']})
+		isAvailable = athlete_person_info.find({'twitter_url_link':athlete_value['twitter_url_link'],'name':athlete_value['name'],'group':athlete_value['group'],'followers':athlete_value['followers'],'img_src':athlete_value['img_src']})
+		#print(isAvailable.count())
+		if isAvailable.count() > 1:
+			print(athlete_value)
+			print(isAvailable.count())
+			counter = counter + isAvailable.count()	
+		#if athlete_value['twitter_url_link'] in athlete2:
+		#	urlath = athlete_value
+		#else:
+		#	leftVal.append(athlete_value)
+			#print(athlete_value)
+			#print('false')
+	print(len(leftVal))
+	print(counter)	
+
+def get_person_class():
+	athlete_file = urllib2.urlopen("http://www.tweeting-athletes.com/index.cfm?CatID=3&People=1")
+	athlete_html = athlete_file.read()
+	athlete_file.close
+	athlete_soup = BeautifulSoup(athlete_html)
+	athlete_person = athlete_soup.find_all('div',class_="person-box")
+	print(len(athlete_person))
+	for classes in athlete_person:
+		#print(classes)
+		url_link = classes.find('a')['href']
+		img_alt  = classes.find('a').find('img')['alt']
+		img_src  = classes.find('a').find('img')['src']
+		athlete_name = classes.find('div',class_='name').string
+		athlete_group = classes.find('div',class_='group').string
+		athlete_followers = classes.find('div',class_='stats').string
+		athlete_info = {'twitter_url_link':url_link, 'img_src':img_src, 'name':athlete_name, 'group':athlete_group, 'followers':athlete_followers}
+		#athlete_person_info.update({'twitter_url_link':url_link},{'twitter_url_link':url_link, 'img_src':img_src, 'name':athlete_name, 'group':athlete_group, 'followers':athlete_followers},True,True)
+		athlete_person_info.insert(athlete_info)		
+
+
+def get_urls():
+	try:
+		redditFile = urllib2.urlopen("http://www.tweeting-athletes.com/index.cfm?CatID=3&People=1")
+		redditHtml = redditFile.read()
+		redditFile.close()
+
+		soup = BeautifulSoup(redditHtml)
+		redditAll = soup.find_all("a")
+		for links in soup.find_all('a'):
+			twitterIdCollection.update({'link':links.get('href')},{'$set':{'link':links.get('href')}},True,True)
+			#twitterIdCollection.insert({'link':links.get('href')})
+			#print(links.get('href'))
+			#athlete_link = find_value('index.cfm?AthleteID=', links.get('href'))
+			#twitterIdCollection.insert({'link':athlete_link})
+			#if(athlete_link != ''):	
+			#	twitterIdCollection.insert({'link':athlete_link})	
+				#print(athlete_link)
+				#athlete_list.append(athlete_link)
+			#athlete_list.append(athlete_link) 
+			#print(find_value('index.cfm?AthleteID=', links.get('href')))		
+	except:
+		print('exception occured in get_urls')
+
+def clean_urls():
+	try:
+		urls = twitterIdCollection.find({'link':{'$regex':'AthleteID='},'twitter_url_link':None})
+		#twitterIdCollection.ensure_index([('link' , pym.ASCENDING), ("unique" , True), ("dropDups" , True)])
+		for url in urls:
+			update_twitter_link_in_mongo(url['link'])
+			#athlete_link = find_value('index.cfm?AthleteID=', url['link'])
+			#if(athlete_link != ''):		
+			#	print(url['link'])
+			#print(url['link'])
+			#print(athlete_link)
+	except:
+		print('exception occured in clean_urls')
+
+def get_twitter_id(url_name):
+	try:
+		redditFile = urllib2.urlopen(url_name)
+
+		redditHtml = redditFile.read()
+
+		redditFile.close()
+
+		twitter_soup = BeautifulSoup(redditHtml)
+	
+		redditAll = twitter_soup.find_all('a',class_= "twitter-follow-button")
+	
+		#print(redditAll)
+		reddit_href = redditAll[0].get('href')
+
+		return(reddit_href)
+		#print(redditAll)
+	except:
+		print('exception occured in get_twitter_id')
+
+def find_value(url_to_search, url_link):
+	try:
+		if url_to_search in url_link:
+			twitter_name = get_twitter_id("http://www.tweeting-athletes.com/" + url_link )
+			twitterIdCollection.update({'link':url_link,'twitter_link_url':None},{'$set':{'twitter_url_link':twitter_name}})
+			#time(10)
+			return twitter_name
+		else:
+			return ''
+	except:
+		print('exception occured in find_value')
+
+def update_twitter_link_in_mongo(link_value):
+	try:
+		twitter_name = get_twitter_id("http://www.tweeting-athletes.com/" + link_value )
+		twitterIdCollection.update({'link':link_value},{'$set':{'twitter_url_link':twitter_name}})
+	except:
+		print('exception occured in update_twitter_link_in_mongo')
+
+
+check_values()
+#get_person_class()
+#twitterIdCollection.ensure_index([("link" , pym.ASCENDING), ("unique" , True), ("dropDups" , True)])
+
+#clean_urls()
+#get_urls()
+#print(len(athlete_list))
+#print(get_twitter_id("http://www.tweeting-athletes.com/index.cfm?AthleteID=26038"))

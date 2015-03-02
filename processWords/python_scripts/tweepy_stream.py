@@ -1,0 +1,24 @@
+from __future__ import absolute_import, print_function
+import authenticate_twitter as at
+from tweepy.streaming import StreamListener
+from tweepy import OAuthHandler
+from tweepy import Stream
+
+
+class StdOutListener(StreamListener):
+	""" A listener handles tweets are the received from the stream.
+	This is a basic listener that just prints received tweets to stdout.
+	"""
+	def on_data(self, data):
+		print(data)
+		return True
+
+	def on_error(self, status):
+		print(status)
+
+if __name__ == '__main__':
+	l = StdOutListener()
+
+	auth = at.authenticate_test_stream()
+	stream = Stream(auth, l)
+	stream.filter(track=['mitchrichmond23'])

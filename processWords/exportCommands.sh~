@@ -1,0 +1,14 @@
+mongoexport --db users --collection contacts --csv --fieldFile fields.txt --out /opt/backups/contacts.csv
+
+mongoimport --db dma --collection masterdma --type csv --headerline --file /home/hduser/Desktop/processWords/Master_DMA.csv 
+
+mongoimport --db dma --collection adwords --type csv --headerline --file /home/hduser/Desktop/processWords/AdWords_updated.csv
+
+City,State Abr,Zip Code,Longitude,DMA Region,State,Latitude
+
+
+
+mongoexport --db dma --collection masterdma --csv --fields City,State Abr,Zip Code,Longitude,DMA Region,State,Latitude --out /home/hduser/Desktop/processWords/Master_DM.csv
+
+mongoexport -d dma -c masterdma --csv -f City,"State Abr","Zip Code",Longitude,"DMA Region",State,Latitude -o /home/hduser/Desktop/processWords/Master_DM.csv
+

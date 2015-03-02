@@ -1,0 +1,9 @@
+import csv
+import pandas as pd
+
+trainData = csv.reader(open("/home/hdfs/TrainData.csv","rb"))
+
+for row in trainData:
+	print row['name']
+
+

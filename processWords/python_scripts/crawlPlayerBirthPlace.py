@@ -1,0 +1,166 @@
+from bs4 import BeautifulSoup
+import urllib2,string,re,time,json
+import mongo_crud as mg
+import pymongo as pym
+from re import findall
+
+db = mg.connect_to_server('localhost',27017,'dma')
+crawl_player = db.crawl_by_birth
+element_list = []
+def getCityUrls():
+	#try:
+		state_url = urllib2.urlopen("http://www.basketball-reference.com/friv/birthplaces.cgi")
+		birth_place_html = state_url.read()
+		state_url.close()
+
+		parse_html = BeautifulSoup(birth_place_html)
+		#get_table = parse_html.find_all("table",{"class":"nav_table no_highlight stats_table"})
+		#parse_table = BeautifulSoup(get_table)
+		get_rows = parse_html.find_all("td")
+		#print('table is ',get_rows)
+		#get_urls = get_table.find("a")
+		#print('url is',get_urls)
+		for url in get_rows:
+			get_link = url.find('a')
+			if get_link != None:
+				get_player_url(get_link.get('href'))
+	#except:
+		#print("exception caught in get city urls function")
+
+def get_player_url(url):
+	#try:
+		print('url is ',url)
+		player_url = urllib2.urlopen('http://www.basketball-reference.com' + url)
+		player_html = player_url.read()
+		player_url.close()
+		
+		parse_html = BeautifulSoup(player_html)
+		
+		get_table = parse_html.find("table",{"id":"stats"})
+		#print('table is ',get_table)
+		for child in get_table.findChildren('a'):
+			#print("children is ",child)
+			get_player_info(child['href'])
+	#except:
+		#print('exception in parse_url function')
+
+def get_player_info(player_url):
+	#try:
+		print('player url is ',player_url)
+		player_info = urllib2.urlopen('http://www.basketball-reference.com' + player_url)
+		player_html = player_info.read()
+		player_info.close()
+		
+		player_soup = BeautifulSoup(player_html,from_encoding="utf-8")
+		#print(player_soup)
+		player_name = player_soup.find('p',{'class':"margin_top"}).text
+		player_div  = player_soup.find('p',{"class" : "padding_bottom_half"})
+		#print('div is ',player_div.prettify())
+		player_text = player_div.text
+		
+		dataCrop = findall(".</span>.<span>.", player_text)
+		#print('datacrop is ',dataCrop)
+		#print('html is',player_text)
+
+		player_text = re.sub('&\w+;',' ',player_text)
+    		player_text = re.sub(u'\xa0\u25aa\xa0' ,' ',player_text)
+
+#		player_text = re.sub('Position:' ,'',player_text)
+#		player_text = re.sub('Shoots:'   ,',',player_text)
+#		player_text = re.sub('Height:'   ,',',player_text)
+#		player_text = re.sub('Weight:'   ,',',player_text)
+#		player_text = re.sub('Born:'     ,'',player_text)
+#		player_text = re.sub('College:' ,'',player_text)
+#		player_text = re.sub('High School:' ,'',player_text)
+#		player_text = re.sub('Draft:'    ,'',player_text)
+#		player_text = re.sub('NBA Debut:','',player_text)
+
+		player_text = re.sub('Position:' ,'Position:',player_text)
+		player_text = re.sub('Shoots:'   ,',Shoots:',player_text)
+		player_text = re.sub('Height:'   ,', Height:',player_text)
+		player_text = re.sub('Weight:'   ,', Weight:',player_text)
+#		player_text = re.sub('Born:'     ,'Born:',player_text)
+#		player_text = re.sub('College:' ,'',player_text)
+#		player_text = re.sub('High School:' ,'',player_text)
+#		player_text = re.sub('Draft:'    ,'',player_text)
+#		player_text = re.sub('NBA Debut:','',player_text)
+#		#player_text = re.sub(u'\n',' ,',player_text)
+	
+		#player_name = player_div.find('h1')
+		#print('player text is',player_text.split('\n'))
+		print('name is ',player_name)
+		player_span = player_div.find_all('span')
+		#for span_info in player_span:
+		#	print('span information is ',span_info.text)
+		#list_info = player_text.split('\n')
+		#print("1 is",list_info[0].split(',')[0])
+		#print("2 is",list_info[1])
+		#print("3 is",list_info[2])
+		#print("5 is",list_info[3])
+		#print("4 is",list_info[4])
+		#print("5 is",list_info[5])
+		#print("6 is",list_info[6])
+		#print("7 is",list_info[7])
+
+		for play_info in player_text.split('\n'):
+			if ':' in play_info:
+				split_save_info(play_info, player_name)
+			#print("text info is",play_info)
+		print('length of list is ',len(element_list))
+		
+		json_text = "{"
+
+		for i in range(len(element_list)):
+			print(element_list[i])
+			if json_text == '{' and i == 0:
+				json_text = json_text + element_list[i]
+			elif i%2 != 0 and i != 0:
+				json_text = json_text + ':' + str(element_list[i]) + ','
+			else:
+				json_text = json_text + str(element_list[i])				
+		
+		json_text = json_text + '}'
+		#print('json text is ', json_text)
+		dict_json = {}
+
+		for i in range((len(element_list)/2)):
+			if i%2 == 0 and i <= (len(element_list) -1):
+				dict_json[element_list[i]] = element_list[i + 1]
+
+		json_object = json.dumps(dict_json)
+		print('json text is ', dict_json)
+		crawl_player.update({'name':player_name},{'$set':dict_json},True)
+		element_list[:] = []
+		print('length of list is ',len(element_list))
+		#for player_info_span in player_span:
+			#print('player info is ',player_info_span.text)
+	#except:
+	#	print("exception caught in get_player_info")
+
+def split_save_info(play_info,player_name):
+	#try:
+		attr_list = play_info.split(':')
+		list_count = len(attr_list)
+		
+		update_json_text = '{'
+		if list_count > 2:
+			print(play_info)
+			attr_list_pos = play_info.split(',')
+			for attr in attr_list_pos:
+				ind_list = attr.split(':')
+				for elements in ind_list:
+					#crawl_player.update({'name':player_name},{'$set':{play_info}})
+					element_list.append(elements.strip())
+					#print("elements are ",elements.strip())
+		elif list_count == 2:
+			#crawl_player.update({'name':player_name},{'$set':{play_info}})
+			for elements in attr_list:
+				#update_json_text = update_json_text + elements.strip()
+				element_list.append(elements.strip())
+				#print('elements are ',elements.strip())
+		
+		
+	#except:
+	#	pass	
+
+getCityUrls()

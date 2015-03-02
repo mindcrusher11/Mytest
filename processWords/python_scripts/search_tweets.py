@@ -1,0 +1,110 @@
+import tweepy
+import json
+import urllib, urllib2, json
+from pygeocoder import Geocoder 
+import mongo_crud as mg
+import time
+
+
+db = mg.connect_to_server('localhost',27017,'dma')
+active_player = db.active_athletes
+
+consumer_key="hhYq78kZ6VkAp4Q4pXzuKCOkA"
+consumer_secret="A468W3FnFd9WcL2PXYeRO0iLWnu90761HkKHijXRXqmgtR1bpk"
+access_token="374363728-BCe1rusHWiVPBHDCQ5RoketbfaNePuHXTeJja7W6"
+access_token_secret="cMyNaQwVzxtXKqSG0jjlI1H6avEoMbvZ36pB7Zr5dPEN0"
+
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+auth.secure = True
+auth.set_access_token(access_token, access_token_secret)
+
+api = tweepy.API(auth)
+
+# If the authentication was successful, you should
+# see the name of the account print out
+print(api.me().name)
+
+class Search_Tweet:
+
+	def save_tweets_excep(player):
+		try:
+			#query_player = str(player) + ' ' + 'nba'  + ' since:2014-08-01 until:2014-12-01 , nba , ' + str(player) 
+			query_player = str(player) + ' since:2014-08-01 until:2014-12-01 , nba' 
+			query_player = str(player) + ' nba'
+
+			print(query_player)
+
+			for tweet in tweepy.Cursor(api.search,q=query_player).items():
+				#db.player_tweets.insert({'Player':player,'tweet_text':tweet.text,'tweet':tweet})
+				#db.player_tweets.insert({'Player':player,'tweet_text':tweet.text,'location':tweet.user.location,'tweet':tweet._json})
+				db.player_tweets_interval.insert({'Player':player,'tweet_text':tweet.text,'location':tweet.user.location, 'created_date':tweet.created_at})			
+				print '***********************************'
+				#print('co ordinates are ',tweet.geo)
+				print '***********************************'
+				print('text is ',tweet.text.encode("utf-8"))
+				#print '***********************************'	
+				#print('place is ',tweet.place)
+				#print '***********************************'
+				#print('country code is',tweet.place.country_code)
+				#print '***********************************'
+				#print('place full name is',tweet.place.full_name)
+				#print '***********************************'
+				#print('location is ',tweet.user.location)
+				#print '***********************************'
+				#print('tweet is ',tweet)
+			return True
+		except:
+			print('exception caught')
+			time.sleep(60)
+			return save_tweets_excep(player)
+
+
+
+
+	def save_tweets(player):
+		#try:
+			query_player = str(player) + ' ' + 'nba'  + ' since:2014-08-01 until:2014-12-01 , nba , ' + str(player) 
+			print(query_player)
+			for tweet in tweepy.Cursor(api.search,q=query_player).items():
+				#process_status(tweet)
+				#db.player_tweets.insert({'Player':player,'tweet_text':tweet.text,'location':tweet.user.location,'tweet':tweet._json})
+				db.player_tweets_time_series.insert({'Player':player,'tweet_text':tweet.text,'tweet':tweet,'tweet':tweet._json})
+				print '***********************************'
+				#print('co ordinates are ',tweet.geo)
+				#print '***********************************'
+				print('text is ',tweet.text.encode("utf-8"))
+				#print '***********************************'	
+				#print('place is ',tweet.place)
+				#print '***********************************'
+				#print('country code is',tweet.place.country_code)
+				#print '***********************************'
+				#print('place full name is',tweet.place.full_name)
+				#print '***********************************'
+				print('location is ',tweet.user.location)
+				#print '***********************************'
+				#print('tweet is ',tweet)
+				print '***********************************'
+				print('tweet created at ',tweet.created_at)
+			return True
+		#except:
+		#	print('exception caught')
+		#	time.sleep(60)
+		#	return save_tweets(player)
+		
+
+	def save_player_tweets():
+		try:
+			athlete_list = active_player.find({},network_timeout=1)
+			for athletes in athlete_list:
+				try:
+					save_tweets_excep(athletes['Player'])
+				except:
+					print('exception caught in for loop tweets')
+			#save_tweets(athletes['Player'])
+			#save_tweets()
+		except:
+			print('exception caught in save player tweets')
+		
+
+search_obj = Search_Tweet()
+search_obj.save_player_tweets()

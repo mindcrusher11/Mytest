@@ -1,0 +1,44 @@
+# imports
+import tweepy
+from pprint import pprint
+import json
+
+# The consumer keys can be found on your application's Details
+# page located at https://dev.twitter.com/apps (under "OAuth settings")
+consumer_key="hhYq78kZ6VkAp4Q4pXzuKCOkA"
+consumer_secret="A468W3FnFd9WcL2PXYeRO0iLWnu90761HkKHijXRXqmgtR1bpk"
+
+# The access tokens can be found on your applications's Details
+# page located at https://dev.twitter.com/apps (located
+# under "Your access token")
+access_token="374363728-BCe1rusHWiVPBHDCQ5RoketbfaNePuHXTeJja7W6"
+access_token_secret="cMyNaQwVzxtXKqSG0jjlI1H6avEoMbvZ36pB7Zr5dPEN0"
+
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+auth.secure = True
+auth.set_access_token(access_token, access_token_secret)
+
+api = tweepy.API(auth, parser=tweepy.parsers.JSONParser())
+# user timeline
+#screen_name = 'klenwell'
+#public_tweets = tweepy.api.user_timeline(screen_name)
+#status_object = public_tweets[0]
+#user_object = status_object.user
+
+# search
+search_terms = "Quincy Acy"
+rpp=25
+geocode="40.712784,-74.005941,10000mi"
+result_list = api.search(search_terms, count=25, lang='en',geocode=geocode)
+search_result_object = result_list
+#keys = json.loads(search_result_object)
+# print results
+#pprint(status_object.__getstate__())
+#pprint(user_object.__getstate__())
+#pprint(search_result_object.__getstate__())
+#geo_json = json.loads(search_result_object.geo)
+pprint(result_list.keys())
+#pprint(result_list["statuses"])
+keys = json.loads(result_list["statuses"])
+#pprint(search_result_object.geo)
+#pprint(geo_json.coordinates)

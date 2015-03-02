@@ -1,0 +1,11 @@
+import time
+import tweepy
+
+ids = []
+
+def find_followers(api,user_screen_name):
+	for page in tweepy.Cursor(api.followers_ids, screen_name=user_screen_name).pages():
+    		ids.extend(page)
+    		time.sleep(20)
+	return ids
+

@@ -1,0 +1,43 @@
+mongoexport --db users --collection contacts --csv --fieldFile fields.txt --out /opt/backups/contacts.csv
+
+mongoimport --db dma --collection masterdma --type csv --headerline --file /home/hduser/Desktop/processWords/Master_DMA.csv 
+
+mongoimport --db dma --collection adwords --type csv --headerline --file /home/hduser/Desktop/processWords/AdWords_updated.csv
+
+City,State Abr,Zip Code,Longitude,DMA Region,State,Latitude
+
+mongoimport --db dma --collection active_athletes --type csv --headerline --file /home/hduser/Desktop/processWords/contracts_players_contracts.csv
+
+
+mongoimport --db dma --collection weeki_athletes --type csv --headerline --file /home/hduser/Desktop/processWords/contracts_players_contracts.csv
+
+mongoexport --db dma --collection masterdma --csv --fields City,State Abr,Zip Code,Longitude,DMA Region,State,Latitude --out /home/hduser/Desktop/processWords/Master_DM.csv
+
+mongoexport -d dma -c masterdma --csv -f City,"State Abr","Zip Code",Longitude,"DMA Region",State,Latitude -o /home/hduser/Desktop/processWords/Master_DM.csv
+
+mongoimport --db dma --collection masterdmaonly --type csv --headerline --file /home/hduser/Desktop/processWords/Master_DMA.csv 
+
+mongoexport --db dma --collection twitter_url --csv --fields link,twitter_url_link --out /home/hduser/Desktop/processWords/athlete_id.csv
+
+mongoexport --db dma --collection athlete_info --csv --fields group,name,followers,twitter_url_link,img_src --out /home/hduser/Desktop/processWords/athlete_info.csv
+
+mongoexport --db dma --collection follower_test -q "{'location':{\$ne:null}},{'_id':false}" --csv --fields follower_id,location --out /home/hduser/Desktop/processWords/follower_location_res1.csv 
+
+mongoexport --db dma --collection follower_test -q "{'user':{\$ne:null}},{'_id':false}" --csv --fields following,follower_id,screen_name,location,user,utc_offset,statuses_count,friends_count,favourites_count,geo_enabled,time_zone,name --out /home/hduser/Desktop/processWords/follower_info_data.csv
+e
+mongoexport --db dma --collection active_athletes -q "{'weeki_comment':{'\$ne':null}}" --csv --fields "Rk","Player","Tm","2014-15","2015-16","2016-17","2017-18","2018-19","2019-20","Signed Using","Guaranteed","Birthplace","HomeTown","HighSchool","College","Past Pro","Past Pro 2","Twitter_id","Twitter_username","Twitter_followers","Twitter_friends","birthPlace","birthPlace_url","weight","nationality","dob","college","weeki_comment","high_school","height" --out /home/hduser/Desktop/processWords/ActivePlayers.csv
+
+
+mongoexport --db dma --collection active_athletes -q "{'weeki_comment':{'\$ne':null}}" --csv --fields "Rk","Player","Tm","2014-15","2015-16","2016-17","2017-18","2018-19","2019-20","Signed Using","Guaranteed","Birthplace","HomeTown","HighSchool","College","Past Pro","Past Pro 2","Twitter_id","Twitter_username","Twitter_followers","Twitter_friends" --out /home/hduser/Desktop/processWords/ActivePlayers.csv
+
+
+mongoimport --db dma --collection weeki_athletes --type csv --headerline --file /home/hduser/Desktop/processWords/BasketballPlayer.csv
+
+mongoexport --db dma --collection crawl_by_school_info --csv --fields  name,city,state,state_url,school_name,player_url --out /home/hduser/Desktop/processWords/player_school_info.csv
+
+mongoexport --db dma --collection crawl_by_birth_info --csv --fields  name,city,state,state_url,dob,player_url --out /home/hduser/Desktop/processWords/player_birth_info.csv
+
+mongoexport --db dma --collection player_tweets --csv --fields  Player,tweet_text,location --out /home/hduser/Desktop/processWords/player_tweet.csv
+
+
+ 

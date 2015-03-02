@@ -1,0 +1,12 @@
+a1.sources = pstream
+a1.channels = memoryChannel
+a1.channels.memoryChannel.type = memory
+a1.sources.pstream.channels = memoryChannel
+a1.sources.pstream.type = exec
+a1.sources.pstream.command = python print_stream.py 200 10
+a1.sinks = hdfsSink
+a1.sinks.hdfsSink.type = hdfs
+a1.sinks.hdfsSink.channel = memoryChannel
+a1.sinks.hdfsSink.hdfs.path = hdfs://hdp/user/root/flumetest
+a1.sinks.hdfsSink.hdfs.fileType = SequenceFile
+a1.sinks.hdfsSink.hdfs.writeFormat = Text

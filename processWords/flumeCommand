@@ -1,0 +1,30 @@
+flume-ng agent --conf conf --conf-file /etc/flume/conf/conf.empty/flume.conf --name a1 -Dflume.root.logger=INFO,consoleWrite failed: Broken pipe
+
+
+https://developers.google.com/adwords/api/docs/appendix/cities-DMAregions
+
+http://goo.gl/3Mxbei
+
+
+export SPARK_HOME=/root/spark-1.2.0.2.2.0.0-82-bin-2.6.0.2.2.0.0-2041
+
+export YARN_CONF_DIR=/etc/hadoop/conf
+
+val file = sc.textFile("hdfs://hadoop:8020/tmp/data")
+val counts = file.flatMap(line => line.split(" ")).map(word => (word, 1)).reduceByKey(_ + _)
+counts.saveAsTextFile("hdfs://hadoop:8020/tmp/wordcount")
+
+
+,geocode="33.5206608,-86.80248999999999,15"
+
+gaurhari
+2015-01-09 03:34:02 {u'type': u'Point', u'coordinates': [34.95584607, -84.7755512]}
+2015-01-09 03:21:48 {u'type': u'Point', u'coordinates': [40.3504145, -75.08800034]}
+2015-01-09 03:08:56 {u'type': u'Point', u'coordinates': [42.7387149, -83.2427735]}
+2015-01-09 03:07:48 {u'type': u'Point', u'coordinates': [41.44671477, -74.02355802]}
+2015-01-09 03:06:11 {u'type': u'Point', u'coordinates': [42.7371578, -84.5065818]}
+2015-01-09 03:02:46 {u'type': u'Point', u'coordinates': [42.20123898, -75.82007934]}
+2015-01-09 03:01:58 {u'type': u'Point', u'coordinates': [43.6565867, -70.27056829]}
+2015-01-09 03:00:57 {u'type': u'Point', u'coordinates': [39.97200579, -83.00297331]}
+2015-01-09 03:00:36 {u'type': u'Point', u'coordinates': [41.34884279, -73.8702157]}
+2015-01-08 20:03:33 {u'type': u'Point', u'coordinates': [40.7026419, -73.37166545]}

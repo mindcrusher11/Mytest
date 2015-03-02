@@ -1,0 +1,111 @@
+gaurhari
+***********************************
+('co ordinates are ', {u'type': u'Point', u'coordinates': [40.66267134, -73.63847405]})
+***********************************
+('text is ', '@ChancellorJack @nyqevo quincy acy')
+***********************************
+('country code is', u'US')
+***********************************
+('place full name is', u'Rockville Centre, NY')
+***********************************
+('location is ', u'NYC')
+***********************************
+***********************************
+('co ordinates are ', {u'type': u'Point', u'coordinates': [40.75463171, -73.99426075]})
+***********************************
+('text is ', "Chanting MVP for Quincy Acy was one of the greatest things I've ever done.")
+***********************************
+('country code is', u'US')
+***********************************
+('place full name is', u'Manhattan, NY')
+***********************************
+('location is ', u'')
+***********************************
+***********************************
+('co ordinates are ', {u'type': u'Point', u'coordinates': [33.941118, -84.1039392]})
+***********************************
+('text is ', '"@nyknicks: Hornets 110 #Knicks 82 F\n\nQuincy Acy: 18pts\nHardaway Jr.: 15pts\n\nTune to @MSGNetworks for postgame coverage." LOOOOOL')
+***********************************
+('country code is', u'US')
+***********************************
+('place full name is', u'Georgia, US')
+***********************************
+('location is ', u'Somewhere in Metro Atlanta')
+***********************************
+***********************************
+('co ordinates are ', {u'type': u'Point', u'coordinates': [40.75052306, -73.99278549]})
+***********************************
+('text is ', 'Quincy Acy for "MVP." Knicks game with the #girlboss @krishaalala @ Madison Square Garden http://t.co/QXVXvCvCuw')
+***********************************
+('country code is', u'US')
+***********************************
+('place full name is', u'Manhattan, NY')
+***********************************
+('location is ', u'Rockland County/Queens NY')
+***********************************
+***********************************
+('co ordinates are ', {u'type': u'Point', u'coordinates': [43.07912518, -79.13508943]})
+***********************************
+('text is ', 'Did I really just hear an arena of 18,000 people chant MVP at Quincy Acy?')
+***********************************
+('country code is', u'CA')
+***********************************
+('place full name is', u'Niagara Falls, Ontario')
+***********************************
+('location is ', u'905')
+***********************************
+***********************************
+('co ordinates are ', {u'type': u'Point', u'coordinates': [40.96567567, -74.10018985]})
+***********************************
+('text is ', "MVP chants for Quincy acy in the garden is so stupid. And that's not just because I hate acy. #15straight")
+***********************************
+('country code is', u'US')
+***********************************
+('place full name is', u'Ridgewood, NJ')
+***********************************
+('location is ', u'nj')
+***********************************
+***********************************
+('co ordinates are ', {u'type': u'Point', u'coordinates': [40.75064431, -73.993225]})
+***********************************
+('text is ', 'Quincy Acy MVP chants forever and ever and ever and ever and')
+***********************************
+('country code is', u'US')
+***********************************
+('place full name is', u'Manhattan, NY')
+***********************************
+('location is ', u'Washington, DC')
+***********************************
+***********************************
+('co ordinates are ', {u'type': u'Point', u'coordinates': [39.99172763, -83.01127448]})
+***********************************
+('text is ', 'Keep Quincy acy')
+***********************************
+('country code is', u'US')
+***********************************
+('place full name is', u'Columbus, OH')
+***********************************
+('location is ', u'where the wild things are ')
+***********************************
+***********************************
+('co ordinates are ', {u'type': u'Point', u'coordinates': [35.25408185, -80.83702122]})
+***********************************
+('text is ', 'Quincy Acy doing it all lmao')
+***********************************
+('country code is', u'US')
+***********************************
+('place full name is', u'Charlotte, NC')
+***********************************
+('location is ', u'Charlotte, NC')
+***********************************
+***********************************
+('co ordinates are ', {u'type': u'Point', u'coordinates': [35.25413416, -80.83697208]})
+***********************************
+('text is ', 'Quincy Acy taking over lmao')
+***********************************
+('country code is', u'US')
+***********************************
+('place full name is', u'Charlotte, NC')
+***********************************
+('location is ', u'Charlotte, NC')
+***********************************
